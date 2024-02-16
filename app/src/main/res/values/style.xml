@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.MockUniversity.HeadlineLarge.Bold" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/hanuman_bold</item>
+        <item name="android:textSize">@dimen/headLineLarge</item>
+    </style>
+    <style name="TextAppearance.MockUniversity.LabelMedium.Regular" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/font_14sp</item>
+    </style>
+    <style name="TextAppearance.MockUniversity.LabelMedium.Medium" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_16sp</item>
+    </style>
+    <style name="TextAppearance.MockUniversity.LabelSmall.Medium" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_12sp</item>
+    </style>
+    <style name="TextAppearance.MockUniversity.LabelSmall.Regular" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/font_12sp</item>
+    </style>
+    <style name="TextAppearance.MockUniversity.LabelSemiMedium.Regular" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/font_14sp</item>
+    </style>
+    <style name="TextAppearance.MockUniversity.LabelBig.Medium" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">@dimen/font_20sp</item>
+    </style>
+
+    <style name="TextAppearance.MockUniversity.LabelBig.Bold" parent="TextAppearance.Material3.LabelSmall">
+        <item name="fontFamily">@font/poppins_bold</item>
+        <item name="android:textSize">@dimen/font_20sp</item>
+    </style>
+
+
+</resources>

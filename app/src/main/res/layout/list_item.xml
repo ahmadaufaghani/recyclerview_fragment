@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp"
+    android:elevation="20dp"
+    android:background="@drawable/bg_itemlist"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="@dimen/margin_16dp"
+    android:layout_marginHorizontal="@dimen/margin_30dp"
+    >
+    <ImageView
+        android:id="@+id/iv_item"
+        android:layout_width="84dp"
+        android:layout_height="61dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/item_img"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Medium"
+        app:layout_constraintStart_toEndOf="@+id/iv_item"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_questionmarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        android:textColor="@color/purple1"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSmall.Medium"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toEndOf="@+id/iv_item"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/tv_slahsmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textColor="@color/purple1"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSmall.Medium"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintStart_toEndOf="@+id/tv_questionmarks"
+        android:layout_marginTop="6dp"
+        app:layout_constraintHorizontal_chainStyle="packed"/>
+
+    <TextView
+        android:id="@+id/tv_questiontotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10"
+        app:layout_constraintStart_toEndOf="@id/tv_slahsmark"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:textColor="@color/purple1"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSmall.Medium"
+
+        android:layout_marginTop="6dp"/>
+
+    <TextView
+        android:id="@id/tv_questionlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="question"
+        android:textColor="@color/lightgrey"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSmall.Regular"
+        app:layout_constraintStart_toEndOf="@id/tv_questiontotal"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="6dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_timemarks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="35m"
+        android:textColor="@color/purple1"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSmall.Medium"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questionmarks"
+        app:layout_constraintStart_toEndOf="@+id/iv_item"
+        app:layout_constraintEnd_toStartOf="@id/tv_timelabel"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/tv_timelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="time-duration"
+        android:textColor="@color/lightgrey"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSmall.Regular"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questionlabel"
+        app:layout_constraintStart_toEndOf="@id/tv_timemarks"
+        android:layout_marginLeft="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_detail"
+        android:layout_width="176dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_filter"
+        android:text="Button"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSemiMedium.Regular"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_timemarks" />
+
+    <ImageView
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:src="@drawable/item_delete_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

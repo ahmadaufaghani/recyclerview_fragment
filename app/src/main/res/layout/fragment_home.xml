@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_24dp"
+    tools:context=".bnv.HomeFragment"
+    android:backgroundTint="@color/lightpurple">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/headLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/lightpurple"
+        android:text="@string/mock"
+        android:textColor="@color/purple1"
+        android:textAppearance="@style/TextAppearance.MockUniversity.HeadlineLarge.Bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/margin_30dp"/>
+    <TextView
+        android:id="@+id/headLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/lightpurple"
+        android:text="@string/university"
+        android:textAppearance="@style/TextAppearance.MockUniversity.HeadlineLarge.Bold"
+        app:layout_constraintStart_toEndOf="@id/headLine1"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="@dimen/margin_11dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/all_btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all"
+        android:elevation="20dp"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Regular"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headLine1"
+        app:layout_constraintEnd_toStartOf="@id/inprogress_btn_filter"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:background="@drawable/bg_filter"
+        android:layout_marginLeft="@dimen/margin_30dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/inprogress_btn_filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_11dp"
+        android:layout_marginTop="@dimen/margin_16dp"
+        android:background="@drawable/bg_filter_off"
+        android:padding="10dp"
+        android:text="In Progress"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Regular"
+        android:textColor="@color/lightgrey"
+        android:elevation="20dp"
+        app:layout_constraintStart_toEndOf="@id/all_btn_filter"
+        app:layout_constraintTop_toBottomOf="@+id/headLine1"
+        app:layout_constraintEnd_toStartOf="@id/completed_filter_btn"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/completed_filter_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_11dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_filter_off"
+        android:padding="10dp"
+        android:elevation="20dp"
+        android:text="@string/completed"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Regular"
+        android:textColor="@color/lightgrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/inprogress_btn_filter"
+        app:layout_constraintTop_toBottomOf="@+id/headLine1"
+        android:layout_marginRight="@dimen/margin_30dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_courseitem"
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inprogress_btn_filter"
+        app:layout_constraintVertical_bias="1.0"
+        tools:listitem="@layout/list_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

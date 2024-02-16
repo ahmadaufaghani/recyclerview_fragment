@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">motionassignment2</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="homeFragment">Home</string>
+    <string name="searchFragment">Search</string>
+    <string name="favoriteFragment">Favorite</string>
+    <string name="watchFragment">Watch List</string>
+    <string name="mock_university">Mock University</string>
+    <string name="all">All</string>
+    <string name="completed">Completed</string>
+    <string name="mock">Mock</string>
+    <string name="university">University</string>
+    <string name="title">title</string>
+</resources>

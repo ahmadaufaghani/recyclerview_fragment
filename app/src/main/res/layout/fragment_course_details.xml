@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bnv.CourseDetailsFragment"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:paddingTop="@dimen/margin_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- TODO: Update blank fragment layout -->
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="57dp"
+            android:layout_height="59dp"
+            android:backgroundTint="@color/grey"
+            android:contentDescription="backButton"
+            android:src="@drawable/round_arrow_back_ios_24"
+            android:tint="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textAppearance="@style/TextAppearance.MockUniversity.LabelBig.Medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_bookmark"
+            app:layout_constraintStart_toEndOf="@id/btn_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btn_bookmark"
+            android:layout_width="55dp"
+            android:layout_height="61dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="@color/grey"
+            android:contentDescription="bookmarkButton"
+            android:src="@drawable/round_bookmark_border_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/iv_item_details"
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:layout_marginHorizontal="@dimen/margin_30dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        android:src="@drawable/item_img"/>
+
+    <TextView
+        android:id="@+id/subtitle_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/title"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelBig.Bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item_details" />
+
+    <ImageView
+        android:id="@+id/question_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="@dimen/margin_30dp"
+        android:src="@drawable/item_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtitle_details" />
+
+    <TextView
+        android:id="@+id/question_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="69dp"
+        android:text="Question"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Medium"
+        app:layout_constraintStart_toEndOf="@+id/question_total"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item_details" />
+
+
+    <TextView
+        android:id="@+id/question_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="69dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Medium"
+        app:layout_constraintStart_toEndOf="@+id/question_logo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item_details" />
+
+    <TextView
+        android:id="@+id/question_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="10 point for a correct answer"
+        app:layout_constraintStart_toEndOf="@+id/time_logo"
+        app:layout_constraintTop_toBottomOf="@+id/question_label"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSemiMedium.Regular"
+        android:textColor="@color/lightgrey"/>
+
+
+    <ImageView
+        android:id="@+id/time_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/margin_30dp"
+        android:src="@drawable/item_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/question_logo" />
+
+    <TextView
+        android:id="@+id/time_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Medium"
+        app:layout_constraintStart_toEndOf="@+id/time_logo"
+        app:layout_constraintTop_toBottomOf="@+id/question_desc" />
+
+
+    <TextView
+        android:id="@+id/time_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Total duration of the quiz"
+        app:layout_constraintStart_toEndOf="@+id/time_logo"
+        app:layout_constraintTop_toBottomOf="@+id/time_total"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSemiMedium.Regular"
+        android:textColor="@color/lightgrey"/>
+
+    <ImageView
+        android:id="@+id/star_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/margin_30dp"
+        android:src="@drawable/item_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/time_logo" />
+
+    <TextView
+        android:id="@+id/star_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="18dp"
+        android:text="Win 10 star"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Medium"
+        app:layout_constraintStart_toEndOf="@+id/star_logo"
+        app:layout_constraintTop_toBottomOf="@+id/time_desc" />
+
+
+    <TextView
+        android:id="@+id/star_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="Answer all the questions correctly"
+        app:layout_constraintStart_toEndOf="@+id/star_logo"
+        app:layout_constraintTop_toBottomOf="@+id/star_total"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelSemiMedium.Regular"
+        android:textColor="@color/lightgrey"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_subdetails"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_filter"
+        android:text="Button"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Medium"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/star_desc" />
+
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:src="@drawable/star"
+        app:layout_constraintEnd_toStartOf="@+id/rating_label"
+        app:layout_constraintTop_toBottomOf="@id/iv_item_details" />
+
+    <TextView
+        android:id="@+id/rating_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="4,7"
+        android:textAppearance="@style/TextAppearance.MockUniversity.LabelMedium.Medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_item_details" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
