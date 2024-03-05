@@ -12,4 +12,8 @@
     <dimen name="font_12sp">12sp</dimen>
     <dimen name="font_20sp">20dp</dimen>
     <dimen name="margin_28dp">28dp</dimen>
+    <dimen name="margin_20dp">20dp</dimen>
+    <dimen name="margin_18dp">18dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_12dp">12dp</dimen>
 </resources>

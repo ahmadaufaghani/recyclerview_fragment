@@ -1,5 +1,6 @@
 package com.example.motionassignment2.bnv
 
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.motionassignment2.R
 import com.example.motionassignment2.databinding.FragmentCourseDetailsBinding
+import com.squareup.picasso.Picasso
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,7 +34,7 @@ class CourseDetailsFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentCourseDetailsBinding.inflate(layoutInflater)
         binding.apply {
-            ivItemDetails.setImageResource(args.courseImage)
+            Picasso.get().load(args.courseImage).into(ivItemDetails)
             titleDetails.setText(args.courseTitle)
             subtitleDetails.setText(args.courseTitle)
             ratingLabel.setText(args.courseRating)

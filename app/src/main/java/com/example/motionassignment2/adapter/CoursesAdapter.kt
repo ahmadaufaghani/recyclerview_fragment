@@ -1,5 +1,6 @@
 package com.example.motionassignment2.adapter
 
+import android.graphics.BitmapFactory
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView.Recycler
 import com.example.motionassignment2.R
 import com.example.motionassignment2.bnv.HomeFragmentDirections
 import com.example.motionassignment2.model.Courses
+import com.squareup.picasso.Picasso
 
 class CoursesAdapter(private val items : List<Courses>) :
     RecyclerView.Adapter<CoursesAdapter.ViewHolder>() {
@@ -29,19 +31,19 @@ class CoursesAdapter(private val items : List<Courses>) :
 
     override fun onBindViewHolder(holder: CoursesAdapter.ViewHolder, position: Int) {
         val currentItem = items[position]
-        holder.courseImage.setImageResource(currentItem.courseImage)
+        Picasso.get().load(currentItem.courseImage).into(holder.courseImage)
         holder.courseTitle.setText(currentItem.courseTitle)
         holder.courseQuestion.setText(currentItem.answeredQuestion)
         holder.courseDuration.setText(currentItem.duration)
         holder.courseButton.setOnClickListener {
             val action = HomeFragmentDirections.actionActionHomeToCourseDetailsFragment2(
-                currentItem.courseImage,
-                currentItem.courseTitle,
-                currentItem.rating,
-                currentItem.answeredQuestion,
-                currentItem.totalQuestion,
-                currentItem.status,
-                currentItem.duration)
+                currentItem.courseImage!!,
+                currentItem.courseTitle!!,
+                currentItem.rating!!,
+                currentItem.answeredQuestion!!,
+                currentItem.totalQuestion!!,
+                currentItem.status!!,
+                currentItem.duration!!)
             findNavController(holder.itemView).navigate(action)
         }
         if(currentItem.status == "in_progress") {

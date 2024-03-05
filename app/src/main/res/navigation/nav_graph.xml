@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_action_home_to_courseDetailsFragment2"
             app:destination="@id/courseDetailsFragment" />
+        <action
+            android:id="@+id/action_action_home_to_addFragment"
+            app:destination="@id/addFragment" />
     </fragment>
     <fragment
         android:id="@+id/action_search"
@@ -29,7 +32,7 @@
             app:destination="@id/action_home" />
         <argument
             android:name="courseImage"
-            app:argType="integer" />
+            app:argType="string" />
         <argument
             android:name="courseTitle"
             app:argType="string" />
@@ -62,4 +65,13 @@
         android:name="com.example.motionassignment2.bnv.WishlistFragment"
         android:label="WishlistFragment" />
     <fragment android:id="@+id/placeholder" />
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.motionassignment2.bnv.AddFragment"
+        android:label="fragment_add"
+        tools:layout="@layout/fragment_add" >
+        <action
+            android:id="@+id/action_addFragment_to_action_home"
+            app:destination="@id/action_home" />
+    </fragment>
 </navigation>
